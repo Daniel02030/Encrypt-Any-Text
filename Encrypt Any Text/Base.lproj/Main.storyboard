@@ -21,30 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Encrypt text input" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="omq-WI-RFs">
-                                <rect key="frame" x="16" y="59" width="171" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhX-XY-yxk">
-                                <rect key="frame" x="51" y="97" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Encrypt!"/>
-                                <connections>
-                                    <action selector="doEncrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4it-nT-tAa"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x8Y-qe-1Cu">
-                                <rect key="frame" x="195" y="59" width="168" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzJ-xB-5g6">
-                                <rect key="frame" x="112" y="135" width="46" height="30"/>
+                                <rect key="frame" x="213" y="76" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Paste"/>
                                 <connections>
@@ -52,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSb-Ff-bdO">
-                                <rect key="frame" x="58" y="135" width="46" height="30"/>
+                                <rect key="frame" x="159" y="76" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Copy"/>
                                 <connections>
@@ -60,38 +38,35 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-MC-Iz2">
-                                <rect key="frame" x="14" y="135" width="46" height="30"/>
+                                <rect key="frame" x="115" y="76" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clip"/>
                                 <connections>
                                     <action selector="clipEncr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZNx-Y2-Edv"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Decrypt text input" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJ5-GX-LmQ">
-                                <rect key="frame" x="12" y="195" width="171" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Encrypt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y0O-s1-1Y4">
+                                <rect key="frame" x="30" y="38" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwB-e7-Wlp">
-                                <rect key="frame" x="47" y="233" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Decrypt!"/>
                                 <connections>
-                                    <action selector="doDecrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2CV-CM-5CM"/>
-                                    <action selector="doEncrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LbC-34-mXc"/>
+                                    <action selector="encryptInputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="5Lf-Qg-mdd"/>
                                 </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V6R-Gn-5kt">
-                                <rect key="frame" x="191" y="195" width="168" height="128"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Decrypt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfp-RI-7Uh">
+                                <rect key="frame" x="30" y="183" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="decryptInputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="PZC-6e-gkU"/>
+                                </connections>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGN-7T-K7H">
-                                <rect key="frame" x="112" y="278" width="46" height="30"/>
+                                <rect key="frame" x="213" y="234" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Paste"/>
                                 <connections>
@@ -99,7 +74,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-Zt-YTT">
-                                <rect key="frame" x="58" y="278" width="46" height="30"/>
+                                <rect key="frame" x="159" y="234" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Copy"/>
                                 <connections>
@@ -107,7 +82,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3q-dY-obS">
-                                <rect key="frame" x="14" y="278" width="46" height="30"/>
+                                <rect key="frame" x="115" y="234" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clip"/>
                                 <connections>
@@ -118,10 +93,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="decryptOutput" destination="V6R-Gn-5kt" id="yTP-ey-hrv"/>
-                        <outlet property="decryptionInput" destination="aJ5-GX-LmQ" id="Jmd-vL-1gt"/>
-                        <outlet property="encryptOutput" destination="x8Y-qe-1Cu" id="Ydt-cE-bL0"/>
-                        <outlet property="encryptionInput" destination="omq-WI-RFs" id="IT0-Hv-wnG"/>
+                        <outlet property="decryptInput" destination="rfp-RI-7Uh" id="tck-jG-wfW"/>
+                        <outlet property="encryptInput" destination="Y0O-s1-1Y4" id="Nh6-0O-btU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
