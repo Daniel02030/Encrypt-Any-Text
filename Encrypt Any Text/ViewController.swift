@@ -12,60 +12,73 @@ class ViewController: UIViewController {
     
     // Encryption objects //
     
-    @IBOutlet weak var encryptionInput: UITextField!
-    @IBOutlet weak var encryptOutput: UITextView!
+
+    @IBOutlet weak var encryptInput: UITextField!
     
-    
-    @IBAction func doEncrypt(_ sender: Any) {
+    @IBAction func encryptInputChanged(_ sender: Any) {
         
-        let temp: String =
-        instance.encryptDecrypt(input: encryptionInput.text!, encryptTrue: true, createUpperCaseVer: false)
-        
-        encryptOutput.text = temp
-        
-        
+        doEncrDecr(encrTrue: true)
+
     }
     
     // Encryption clip, copy, paste
     @IBAction func clipEncr(_ sender: Any) {
-        UIPasteboard.general.string = encryptOutput.text
-        encryptionInput.text = ""
-        encryptOutput.text = ""
+        UIPasteboard.general.string = encryptInput.text
+        encryptInput.text = ""
+        decryptInput.text = ""
     }
     @IBAction func copyEncr(_ sender: Any) {
-        UIPasteboard.general.string = encryptOutput.text
+        UIPasteboard.general.string = encryptInput.text
     }
     @IBAction func pasteEncr(_ sender: Any) {
-        encryptionInput.text = UIPasteboard.general.string
+        encryptInput.text = UIPasteboard.general.string
+        doEncrDecr(encrTrue: true)
     }
     
     // Decryption objects //
     
-    @IBOutlet weak var decryptionInput: UITextField!
-    @IBOutlet weak var decryptOutput: UITextView!
+    @IBOutlet weak var decryptInput: UITextField!
 
-    @IBAction func doDecrypt(_ sender: Any) {
+    @IBAction func decryptInputChanged(_ sender: Any) {
         
-        let temp: String =
-        instance.encryptDecrypt(input: decryptionInput.text!, encryptTrue: false, createUpperCaseVer: false)
-        
-        decryptOutput.text = temp
-        
+        doEncrDecr(encrTrue: false)
+
     }
+    
     // Decryption clip, copy, paste
     @IBAction func clipDecr(_ sender: Any) {
-        UIPasteboard.general.string = decryptOutput.text
-        decryptionInput.text = ""
-        decryptOutput.text = ""
+        UIPasteboard.general.string = decryptInput.text
+        encryptInput.text = ""
+        decryptInput.text = ""
     }
     @IBAction func copyDecr(_ sender: Any) {
-        UIPasteboard.general.string = decryptOutput.text
+        UIPasteboard.general.string = decryptInput.text
     }
     @IBAction func pasteDecr(_ sender: Any) {
-        decryptionInput.text = UIPasteboard.general.string
+        decryptInput.text = UIPasteboard.general.string
+        doEncrDecr(encrTrue: false)
     }
     
-    
+    //// Custom func //// 
+    func doEncrDecr(encrTrue: Bool) {
+        var encryptInputOrDecryptInput: String = ""
+        
+        if encrTrue == true {
+            encryptInputOrDecryptInput = encryptInput.text!
+        } else {
+            encryptInputOrDecryptInput = decryptInput.text!
+        }
+        
+        let temp: String =
+            instance.encryptDecrypt(input: encryptInputOrDecryptInput, encryptTrue: encrTrue, createUpperCaseVer: false)
+        
+        if encrTrue == true {
+            decryptInput.text = temp
+        } else {
+            encryptInput.text = temp
+        }
+        
+    }
     
     
     
