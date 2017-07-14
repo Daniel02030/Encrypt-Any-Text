@@ -17,12 +17,7 @@ class ViewController: UIViewController {
     
     @IBAction func encryptInputChanged(_ sender: Any) {
         
-        let temp: String =
-            instance.encryptDecrypt(input: encryptInput.text!, encryptTrue: true, createUpperCaseVer: false)
-        
-        decryptInput.text = temp
-        
-        
+        doEncrDecr(encrTrue: true)
 
     }
     
@@ -37,6 +32,7 @@ class ViewController: UIViewController {
     }
     @IBAction func pasteEncr(_ sender: Any) {
         encryptInput.text = UIPasteboard.general.string
+        doEncrDecr(encrTrue: true)
     }
     
     // Decryption objects //
@@ -45,11 +41,7 @@ class ViewController: UIViewController {
 
     @IBAction func decryptInputChanged(_ sender: Any) {
         
-        let temp: String =
-            instance.encryptDecrypt(input: decryptInput.text!, encryptTrue: false, createUpperCaseVer: false)
-        
-        encryptInput.text = temp
-        
+        doEncrDecr(encrTrue: false)
 
     }
     
@@ -64,9 +56,29 @@ class ViewController: UIViewController {
     }
     @IBAction func pasteDecr(_ sender: Any) {
         decryptInput.text = UIPasteboard.general.string
+        doEncrDecr(encrTrue: false)
     }
     
-    
+    //// Custom func //// 
+    func doEncrDecr(encrTrue: Bool) {
+        var encryptInputOrDecryptInput: String = ""
+        
+        if encrTrue == true {
+            encryptInputOrDecryptInput = encryptInput.text!
+        } else {
+            encryptInputOrDecryptInput = decryptInput.text!
+        }
+        
+        let temp: String =
+            instance.encryptDecrypt(input: encryptInputOrDecryptInput, encryptTrue: encrTrue, createUpperCaseVer: false)
+        
+        if encrTrue == true {
+            decryptInput.text = temp
+        } else {
+            encryptInput.text = temp
+        }
+        
+    }
     
     
     
